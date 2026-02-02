@@ -3,11 +3,16 @@ import SwiftUI
 struct HoleMarkerView: View {
     let hole: Hole
     let scale: Double
+    let zoneWidth: Double
+    let zoneHeight: Double
     let isSelected: Bool
     let isDragging: Bool
     
     var body: some View {
         GeometryReader { geo in
+            let centerX = geo.size.width / 2
+            let centerY = geo.size.height / 2
+            
             ZStack {
                 // Outer glow when selected or dragging
                 if isSelected || isDragging {
@@ -41,8 +46,8 @@ struct HoleMarkerView: View {
                 }
             }
             .position(
-                x: geo.size.width / 2 - (CGFloat((geo.size.width / 2) / scale) - CGFloat(hole.x)) * scale,
-                y: geo.size.height / 2 - (CGFloat((geo.size.height / 2) / scale) - CGFloat(hole.y)) * scale
+                x: centerX + CGFloat((hole.x - zoneWidth / 2) * scale),
+                y: centerY + CGFloat((hole.y - zoneHeight / 2) * scale)
             )
             .animation(.easeOut(duration: 0.15), value: isDragging)
         }
@@ -53,8 +58,10 @@ struct HoleMarkerView: View {
     ZStack {
         AppTheme.background
         HoleMarkerView(
-            hole: Hole(number: 5, x: 100, y: 100, status: .drilled, catches: 2),
+            hole: Hole(number: 5, x: 25, y: 15, status: .drilled, catches: 2),
             scale: 5,
+            zoneWidth: 50,
+            zoneHeight: 30,
             isSelected: true,
             isDragging: false
         )

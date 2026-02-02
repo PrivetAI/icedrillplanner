@@ -117,10 +117,15 @@ struct ZoneCanvasView: View {
                     .offset(x: offset.width, y: offset.height)
                 
                 // Holes
+                let zoneWidth = zone.shape == .rectangle ? zone.width : zone.height * 2
+                let zoneHeight = zone.shape == .rectangle ? zone.height : zone.height * 2
+                
                 ForEach(viewModel.currentPlan.holes) { hole in
                     HoleMarkerView(
                         hole: hole,
                         scale: currentScale,
+                        zoneWidth: zoneWidth,
+                        zoneHeight: zoneHeight,
                         isSelected: viewModel.selectedHole?.id == hole.id,
                         isDragging: draggedHole?.id == hole.id
                     )
