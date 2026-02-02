@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00000001 /* IceDrillPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000001; };
+		00000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000002; };
+		00000003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10000003; };
+		00000004 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000004; };
+		00000005 /* FishingZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000005; };
+		00000006 /* Hole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000006; };
+		00000007 /* HolePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000007; };
+		00000008 /* FishingPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000008; };
+		00000009 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000009; };
+		0000000A /* GeometryUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000000A; };
+		0000000B /* PlannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000000B; };
+		0000000C /* NewPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000000C; };
+		0000000D /* FishSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000000D; };
+		0000000E /* PatternSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000000E; };
+		0000000F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1000000F; };
+		00000010 /* HoleDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000010; };
+		00000011 /* HoleMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000011; };
+		00000012 /* StatsPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000012; };
+		00000013 /* SavedPlansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000013; };
+		00000014 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000014; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		10000001 /* IceDrillPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceDrillPlannerApp.swift; sourceTree = "<group>"; };
+		10000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		10000003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		10000004 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		10000005 /* FishingZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingZone.swift; sourceTree = "<group>"; };
+		10000006 /* Hole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hole.swift; sourceTree = "<group>"; };
+		10000007 /* HolePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolePattern.swift; sourceTree = "<group>"; };
+		10000008 /* FishingPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingPlan.swift; sourceTree = "<group>"; };
+		10000009 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		1000000A /* GeometryUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryUtils.swift; sourceTree = "<group>"; };
+		1000000B /* PlannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewModel.swift; sourceTree = "<group>"; };
+		1000000C /* NewPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlanView.swift; sourceTree = "<group>"; };
+		1000000D /* FishSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishSelectionView.swift; sourceTree = "<group>"; };
+		1000000E /* PatternSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternSelectionView.swift; sourceTree = "<group>"; };
+		1000000F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		10000010 /* HoleDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoleDetailSheet.swift; sourceTree = "<group>"; };
+		10000011 /* HoleMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoleMarkerView.swift; sourceTree = "<group>"; };
+		10000012 /* StatsPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsPanelView.swift; sourceTree = "<group>"; };
+		10000013 /* SavedPlansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlansView.swift; sourceTree = "<group>"; };
+		10000014 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		20000001 /* IceDrillPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IceDrillPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40000001 = {
+			isa = PBXGroup;
+			children = (
+				40000002 /* IceDrillPlanner */,
+				40000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		40000002 /* IceDrillPlanner */ = {
+			isa = PBXGroup;
+			children = (
+				10000001 /* IceDrillPlannerApp.swift */,
+				10000002 /* ContentView.swift */,
+				40000004 /* Models */,
+				40000005 /* ViewModels */,
+				40000006 /* Views */,
+				40000007 /* Theme */,
+				40000008 /* Utils */,
+				10000003 /* Assets.xcassets */,
+			);
+			path = IceDrillPlanner;
+			sourceTree = "<group>";
+		};
+		40000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20000001 /* IceDrillPlanner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40000004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				10000005 /* FishingZone.swift */,
+				10000006 /* Hole.swift */,
+				10000007 /* HolePattern.swift */,
+				10000008 /* FishingPlan.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		40000005 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1000000B /* PlannerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		40000006 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40000009 /* NewPlan */,
+				4000000A /* Map */,
+				4000000B /* SavedPlans */,
+				4000000C /* Settings */,
+				4000000D /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		40000007 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				10000004 /* AppTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		40000008 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				10000009 /* StorageManager.swift */,
+				1000000A /* GeometryUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		40000009 /* NewPlan */ = {
+			isa = PBXGroup;
+			children = (
+				1000000C /* NewPlanView.swift */,
+				1000000D /* FishSelectionView.swift */,
+				1000000E /* PatternSelectionView.swift */,
+			);
+			path = NewPlan;
+			sourceTree = "<group>";
+		};
+		4000000A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				1000000F /* MapView.swift */,
+				10000010 /* HoleDetailSheet.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		4000000B /* SavedPlans */ = {
+			isa = PBXGroup;
+			children = (
+				10000013 /* SavedPlansView.swift */,
+			);
+			path = SavedPlans;
+			sourceTree = "<group>";
+		};
+		4000000C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				10000014 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		4000000D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				10000011 /* HoleMarkerView.swift */,
+				10000012 /* StatsPanelView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50000001 /* IceDrillPlanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60000001;
+			buildPhases = (
+				50000002 /* Sources */,
+				30000001 /* Frameworks */,
+				50000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IceDrillPlanner;
+			productName = IceDrillPlanner;
+			productReference = 20000001 /* IceDrillPlanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					50000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 60000002;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40000001;
+			productRefGroup = 40000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50000001 /* IceDrillPlanner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00000003 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00000001 /* IceDrillPlannerApp.swift in Sources */,
+				00000002 /* ContentView.swift in Sources */,
+				00000004 /* AppTheme.swift in Sources */,
+				00000005 /* FishingZone.swift in Sources */,
+				00000006 /* Hole.swift in Sources */,
+				00000007 /* HolePattern.swift in Sources */,
+				00000008 /* FishingPlan.swift in Sources */,
+				00000009 /* StorageManager.swift in Sources */,
+				0000000A /* GeometryUtils.swift in Sources */,
+				0000000B /* PlannerViewModel.swift in Sources */,
+				0000000C /* NewPlanView.swift in Sources */,
+				0000000D /* FishSelectionView.swift in Sources */,
+				0000000E /* PatternSelectionView.swift in Sources */,
+				0000000F /* MapView.swift in Sources */,
+				00000010 /* HoleDetailSheet.swift in Sources */,
+				00000011 /* HoleMarkerView.swift in Sources */,
+				00000012 /* StatsPanelView.swift in Sources */,
+				00000013 /* SavedPlansView.swift in Sources */,
+				00000014 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		80000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		80000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ice Drill Planner";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.icefishing.drillplanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		80000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ice Drill Planner";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.icefishing.drillplanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60000001 /* Build configuration list for PBXNativeTarget "IceDrillPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80000003 /* Debug */,
+				80000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60000002 /* Build configuration list for PBXProject "IceDrillPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80000001 /* Debug */,
+				80000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70000001 /* Project object */;
+}

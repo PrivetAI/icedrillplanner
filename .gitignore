@@ -1,0 +1,27 @@
+# General
+.DS_Store
+
+# Node.js / Web
+node_modules/
+build/
+dist/
+.next/
+coverage/
+.turbo/
+
+# iOS / Xcode
+DerivedData/
+*.xcuserstate
+*.xcuserdata/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Environment Variables
+.env
+
+# Git specific (matches *.git* from archive script, though usually you want to commit .gitignore)
+.git/
