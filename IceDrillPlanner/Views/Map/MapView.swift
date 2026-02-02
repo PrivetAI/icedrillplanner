@@ -76,14 +76,14 @@ struct MapView: View {
                     .presentationDragIndicator(.visible)
             }
         }
-        .alert("Сохранить план", isPresented: $showSaveDialog) {
-            TextField("Название плана", text: $planName)
-            Button("Отмена", role: .cancel) {}
-            Button("Сохранить") {
+        .alert("Save Plan", isPresented: $showSaveDialog) {
+            TextField("Plan Name", text: $planName)
+            Button("Cancel", role: .cancel) {}
+            Button("Save") {
                 viewModel.savePlan(name: planName)
             }
         } message: {
-            Text("Введите название для плана")
+            Text("Enter a name for the plan")
         }
     }
 }
@@ -288,7 +288,7 @@ struct ScaleIndicatorView: View {
                 .fill(AppTheme.textSecondary)
                 .frame(width: CGFloat(width), height: 3)
             
-            Text("\(Int(metersPerUnit))м")
+            Text("\(Int(metersPerUnit))m")
                 .font(.caption2)
                 .foregroundColor(AppTheme.textMuted)
         }

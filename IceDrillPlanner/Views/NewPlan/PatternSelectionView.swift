@@ -8,7 +8,7 @@ struct PatternSelectionView: View {
             VStack(spacing: AppTheme.paddingLarge) {
                 // Pattern selection
                 VStack(alignment: .leading, spacing: AppTheme.paddingSmall) {
-                    Text("Паттерн расстановки")
+                    Text("Hole Pattern")
                         .font(.headline)
                         .foregroundColor(AppTheme.textPrimary)
                     
@@ -29,7 +29,7 @@ struct PatternSelectionView: View {
                 
                 // Spacing slider
                 VStack(alignment: .leading, spacing: AppTheme.paddingSmall) {
-                    Text("Расстояние между лунками")
+                    Text("Hole Spacing")
                         .font(.headline)
                         .foregroundColor(AppTheme.textPrimary)
                     
@@ -84,10 +84,10 @@ struct SpacingSlider: View {
     @Binding var value: Double
     
     let presets: [(String, Double)] = [
-        ("Близко", 3),
-        ("Средне", 5),
-        ("Далеко", 10),
-        ("Очень далеко", 15)
+        ("Close", 3),
+        ("Medium", 5),
+        ("Far", 10),
+        ("Very Far", 15)
     ]
     
     var body: some View {
@@ -95,11 +95,11 @@ struct SpacingSlider: View {
             // Slider
             VStack(alignment: .leading, spacing: 4) {
                 HStack {
-                    Text("Расстояние")
+                    Text("Spacing")
                         .font(.subheadline)
                         .foregroundColor(AppTheme.textSecondary)
                     Spacer()
-                    Text("\(String(format: "%.1f", value)) м")
+                    Text("\(String(format: "%.1f", value)) m")
                         .font(.subheadline.bold())
                         .foregroundColor(AppTheme.primary)
                 }
@@ -137,16 +137,16 @@ struct PlanSummaryCard: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: AppTheme.paddingSmall) {
-            Text("Итого")
+            Text("Summary")
                 .font(.headline)
                 .foregroundColor(AppTheme.textPrimary)
             
             VStack(spacing: AppTheme.paddingSmall) {
-                SummaryRow(icon: plan.zone.shape.icon, title: "Зона", value: plan.zone.displaySize)
-                SummaryRow(icon: "square.dashed", title: "Площадь", value: "\(Int(plan.zone.area)) м²")
-                SummaryRow(icon: plan.targetFish.emoji, title: "Рыба", value: plan.targetFish.displayName)
-                SummaryRow(icon: plan.pattern.icon, title: "Паттерн", value: plan.pattern.displayName)
-                SummaryRow(icon: "ruler", title: "Расстояние", value: "\(String(format: "%.1f", plan.spacing)) м")
+                SummaryRow(icon: plan.zone.shape.icon, title: "Zone", value: plan.zone.displaySize)
+                SummaryRow(icon: "square.dashed", title: "Area", value: "\(Int(plan.zone.area)) m²")
+                SummaryRow(icon: plan.targetFish.emoji, title: "Fish", value: plan.targetFish.displayName)
+                SummaryRow(icon: plan.pattern.icon, title: "Pattern", value: plan.pattern.displayName)
+                SummaryRow(icon: "ruler", title: "Spacing", value: "\(String(format: "%.1f", plan.spacing)) m")
             }
             .padding(AppTheme.paddingMedium)
             .background(AppTheme.cardBackground)

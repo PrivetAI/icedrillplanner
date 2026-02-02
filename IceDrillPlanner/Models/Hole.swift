@@ -13,11 +13,11 @@ enum HoleStatus: String, Codable, CaseIterable, Identifiable {
     
     var displayName: String {
         switch self {
-        case .planned: return "Запланирована"
-        case .drilled: return "Пробурена"
-        case .active: return "Активная"
-        case .caught: return "Поклёвка!"
-        case .empty: return "Пустая"
+        case .planned: return "Planned"
+        case .drilled: return "Drilled"
+        case .active: return "Active"
+        case .caught: return "Bite!"
+        case .empty: return "Empty"
         }
     }
     

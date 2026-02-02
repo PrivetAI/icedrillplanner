@@ -35,7 +35,7 @@ struct NewPlanView: View {
                         } label: {
                             HStack {
                                 Image(systemName: "chevron.left")
-                                Text("Назад")
+                                Text("Back")
                             }
                             .font(.headline)
                             .foregroundColor(AppTheme.textSecondary)
@@ -54,7 +54,7 @@ struct NewPlanView: View {
                         }
                     } label: {
                         HStack {
-                            Text(viewModel.wizardStep < 2 ? "Далее" : "Создать план")
+                            Text(viewModel.wizardStep < 2 ? "Next" : "Create Plan")
                             Image(systemName: viewModel.wizardStep < 2 ? "chevron.right" : "checkmark")
                         }
                         .font(.headline)
@@ -69,7 +69,7 @@ struct NewPlanView: View {
                 .padding(.bottom, AppTheme.paddingLarge)
             }
         }
-        .navigationTitle("Новый план")
+        .navigationTitle("New Plan")
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(AppTheme.background, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
@@ -79,7 +79,7 @@ struct NewPlanView: View {
 // MARK: - Step Progress View
 struct StepProgressView: View {
     let currentStep: Int
-    let steps = ["Зона", "Рыба", "Паттерн"]
+    let steps = ["Zone", "Fish", "Pattern"]
     
     var body: some View {
         HStack(spacing: 0) {
@@ -125,7 +125,7 @@ struct ZoneSetupView: View {
             VStack(spacing: AppTheme.paddingLarge) {
                 // Shape selection
                 VStack(alignment: .leading, spacing: AppTheme.paddingSmall) {
-                    Text("Форма зоны")
+                    Text("Zone Shape")
                         .font(.headline)
                         .foregroundColor(AppTheme.textPrimary)
                     
@@ -143,52 +143,52 @@ struct ZoneSetupView: View {
                 
                 // Dimensions
                 VStack(alignment: .leading, spacing: AppTheme.paddingMedium) {
-                    Text("Размеры")
+                    Text("Dimensions")
                         .font(.headline)
                         .foregroundColor(AppTheme.textPrimary)
                     
                     if viewModel.currentPlan.zone.shape == .rectangle {
                         DimensionSlider(
-                            title: "Длина",
+                            title: "Length",
                             value: $viewModel.currentPlan.zone.width,
                             range: 10...200,
-                            unit: "м"
+                            unit: "m"
                         )
                         
                         DimensionSlider(
-                            title: "Ширина",
+                            title: "Width",
                             value: $viewModel.currentPlan.zone.height,
                             range: 10...200,
-                            unit: "м"
+                            unit: "m"
                         )
                     } else {
                         DimensionSlider(
-                            title: "Радиус",
+                            title: "Radius",
                             value: $viewModel.currentPlan.zone.height,
                             range: 5...100,
-                            unit: "м"
+                            unit: "m"
                         )
                     }
                 }
                 
                 // Conditions
                 VStack(alignment: .leading, spacing: AppTheme.paddingMedium) {
-                    Text("Условия")
+                    Text("Conditions")
                         .font(.headline)
                         .foregroundColor(AppTheme.textPrimary)
                     
                     DimensionSlider(
-                        title: "Глубина воды",
+                        title: "Water Depth",
                         value: $viewModel.currentPlan.zone.depth,
                         range: 1...50,
-                        unit: "м"
+                        unit: "m"
                     )
                     
                     DimensionSlider(
-                        title: "Толщина льда",
+                        title: "Ice Thickness",
                         value: $viewModel.currentPlan.zone.iceThickness,
                         range: 10...100,
-                        unit: "см"
+                        unit: "cm"
                     )
                 }
                 
@@ -263,16 +263,16 @@ struct ZonePreviewCard: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: AppTheme.paddingSmall) {
-            Text("Предпросмотр")
+            Text("Preview")
                 .font(.headline)
                 .foregroundColor(AppTheme.textPrimary)
             
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
                     Label(zone.displaySize, systemImage: "ruler")
-                    Label("Площадь: \(Int(zone.area)) м²", systemImage: "square.dashed")
-                    Label("Глубина: \(Int(zone.depth)) м", systemImage: "water.waves")
-                    Label("Лёд: \(Int(zone.iceThickness)) см", systemImage: "snowflake")
+                    Label("Area: \(Int(zone.area)) m²", systemImage: "square.dashed")
+                    Label("Depth: \(Int(zone.depth)) m", systemImage: "water.waves")
+                    Label("Ice: \(Int(zone.iceThickness)) cm", systemImage: "snowflake")
                 }
                 .font(.subheadline)
                 .foregroundColor(AppTheme.textSecondary)

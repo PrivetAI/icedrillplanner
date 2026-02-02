@@ -16,7 +16,7 @@ struct StatsPanelView: View {
                     Image(systemName: "chart.bar.fill")
                         .foregroundColor(AppTheme.primary)
                     
-                    Text("Статистика")
+                    Text("Statistics")
                         .font(.subheadline.bold())
                         .foregroundColor(AppTheme.textPrimary)
                     
@@ -25,9 +25,9 @@ struct StatsPanelView: View {
                     // Quick stats
                     if !isExpanded {
                         HStack(spacing: AppTheme.paddingMedium) {
-                            QuickStat(value: "\(plan.totalHoles)", label: "лунок")
-                            QuickStat(value: "\(plan.drilledHoles)", label: "пробур.")
-                            QuickStat(value: "\(plan.totalCatches)", label: "улов")
+                            QuickStat(value: "\(plan.totalHoles)", label: "holes")
+                            QuickStat(value: "\(plan.drilledHoles)", label: "drilled")
+                            QuickStat(value: "\(plan.totalCatches)", label: "catch")
                         }
                     }
                     
@@ -48,21 +48,21 @@ struct StatsPanelView: View {
                     HStack(spacing: AppTheme.paddingMedium) {
                         StatCard(
                             icon: "circle.dotted",
-                            title: "Всего лунок",
+                            title: "Total Holes",
                             value: "\(plan.totalHoles)",
                             color: AppTheme.holePlanned
                         )
                         
                         StatCard(
                             icon: "checkmark.circle",
-                            title: "Пробурено",
+                            title: "Drilled",
                             value: "\(plan.drilledHoles)",
                             color: AppTheme.holeDrilled
                         )
                         
                         StatCard(
                             icon: "fish.fill",
-                            title: "Улов",
+                            title: "Catch",
                             value: "\(plan.totalCatches)",
                             color: AppTheme.holeCaught
                         )
@@ -72,21 +72,21 @@ struct StatsPanelView: View {
                     HStack(spacing: AppTheme.paddingMedium) {
                         StatCard(
                             icon: "ruler",
-                            title: "Мин. расст.",
-                            value: String(format: "%.1f м", plan.minDistance),
+                            title: "Min Dist",
+                            value: String(format: "%.1f m", plan.minDistance),
                             color: AppTheme.accent
                         )
                         
                         StatCard(
                             icon: "ruler",
-                            title: "Сред. расст.",
-                            value: String(format: "%.1f м", plan.averageDistance),
+                            title: "Avg Dist",
+                            value: String(format: "%.1f m", plan.averageDistance),
                             color: AppTheme.primary
                         )
                         
                         StatCard(
                             icon: "square.dashed",
-                            title: "Покрытие",
+                            title: "Coverage",
                             value: String(format: "%.0f%%", plan.coveragePercent),
                             color: AppTheme.success
                         )
@@ -96,7 +96,7 @@ struct StatsPanelView: View {
                     HStack {
                         Label(plan.zone.displaySize, systemImage: plan.zone.shape.icon)
                         Spacer()
-                        Label("\(Int(plan.zone.area)) м²", systemImage: "square.dashed")
+                        Label("\(Int(plan.zone.area)) m²", systemImage: "square.dashed")
                         Spacer()
                         Label(plan.pattern.displayName, systemImage: plan.pattern.icon)
                     }

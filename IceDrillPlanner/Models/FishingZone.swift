@@ -9,8 +9,8 @@ enum ZoneShape: String, Codable, CaseIterable, Identifiable {
     
     var displayName: String {
         switch self {
-        case .rectangle: return "Прямоугольник"
-        case .circle: return "Круг"
+        case .rectangle: return "Rectangle"
+        case .circle: return "Circle"
         }
     }
     
@@ -56,9 +56,9 @@ struct FishingZone: Codable, Equatable {
     var displaySize: String {
         switch shape {
         case .rectangle:
-            return "\(Int(width))м × \(Int(height))м"
+            return "\(Int(width))m × \(Int(height))m"
         case .circle:
-            return "R = \(Int(height))м"
+            return "R = \(Int(height))m"
         }
     }
 }

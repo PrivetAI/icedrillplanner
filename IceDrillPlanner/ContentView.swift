@@ -16,7 +16,7 @@ struct ContentView: View {
             }
             .tabItem {
                 Image(systemName: "plus.circle.fill")
-                Text("Новый план")
+                Text("New Plan")
             }
             .tag(0)
             
@@ -26,7 +26,7 @@ struct ContentView: View {
             }
             .tabItem {
                 Image(systemName: "folder.fill")
-                Text("Мои планы")
+                Text("My Plans")
             }
             .tag(1)
             
@@ -36,7 +36,7 @@ struct ContentView: View {
             }
             .tabItem {
                 Image(systemName: "gearshape.fill")
-                Text("Настройки")
+                Text("Settings")
             }
             .tag(2)
         }

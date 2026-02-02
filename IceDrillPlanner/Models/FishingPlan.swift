@@ -14,13 +14,13 @@ enum FishType: String, Codable, CaseIterable, Identifiable {
     
     var displayName: String {
         switch self {
-        case .perch: return "Окунь"
-        case .pike: return "Щука"
-        case .zander: return "Судак"
-        case .trout: return "Форель"
-        case .roach: return "Плотва"
-        case .burbot: return "Налим"
-        case .mixed: return "Смешанная"
+        case .perch: return "Perch"
+        case .pike: return "Pike"
+        case .zander: return "Zander"
+        case .trout: return "Trout"
+        case .roach: return "Roach"
+        case .burbot: return "Burbot"
+        case .mixed: return "Mixed"
         }
     }
     
@@ -62,13 +62,13 @@ enum FishType: String, Codable, CaseIterable, Identifiable {
     
     var description: String {
         switch self {
-        case .perch: return "Стайная рыба, мелководье. Лунки близко, сеткой."
-        case .pike: return "Одиночный хищник. Лунки далеко, у травы и коряг."
-        case .zander: return "Глубина, перепады. Линия вдоль свала."
-        case .trout: return "Глубина, кислород. Холодные зоны."
-        case .roach: return "Большие стаи, средняя глубина."
-        case .burbot: return "Ночная рыба, глубокие ямы."
-        case .mixed: return "Универсальный подход для разной рыбы."
+        case .perch: return "Schooling fish, shallow water. Holes close together, grid pattern."
+        case .pike: return "Solitary predator. Holes far apart, near weeds and snags."
+        case .zander: return "Deep water, drop-offs. Line along the ledge."
+        case .trout: return "Deep, oxygenated water. Cold zones."
+        case .roach: return "Large schools, medium depth."
+        case .burbot: return "Nocturnal fish, deep holes."
+        case .mixed: return "Universal approach for various fish."
         }
     }
 }
@@ -88,7 +88,7 @@ struct FishingPlan: Codable, Identifiable, Equatable {
     
     init(
         id: UUID = UUID(),
-        name: String = "Новый план",
+        name: String = "New Plan",
         zone: FishingZone = FishingZone(),
         holes: [Hole] = [],
         pattern: HolePattern = .grid,

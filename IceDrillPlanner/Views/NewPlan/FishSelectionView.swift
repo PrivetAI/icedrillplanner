@@ -6,7 +6,7 @@ struct FishSelectionView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: AppTheme.paddingLarge) {
-                Text("Выберите целевую рыбу")
+                Text("Select Target Fish")
                     .font(.headline)
                     .foregroundColor(AppTheme.textPrimary)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -86,7 +86,7 @@ struct FishInfoCard: View {
             
             HStack(spacing: AppTheme.paddingLarge) {
                 VStack(alignment: .leading) {
-                    Text("Рекомендуемый паттерн")
+                    Text("Recommended Pattern")
                         .font(.caption)
                         .foregroundColor(AppTheme.textMuted)
                     HStack {
@@ -100,10 +100,10 @@ struct FishInfoCard: View {
                 Spacer()
                 
                 VStack(alignment: .trailing) {
-                    Text("Расстояние")
+                    Text("Spacing")
                         .font(.caption)
                         .foregroundColor(AppTheme.textMuted)
-                    Text("\(Int(fish.recommendedSpacing)) м")
+                    Text("\(Int(fish.recommendedSpacing)) m")
                         .font(.subheadline.bold())
                         .foregroundColor(AppTheme.accent)
                 }

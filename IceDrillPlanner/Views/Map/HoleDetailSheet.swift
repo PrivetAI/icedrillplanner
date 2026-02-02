@@ -26,7 +26,7 @@ struct HoleDetailSheet: View {
                             }
                             
                             VStack(alignment: .leading, spacing: 4) {
-                                Text("Лунка #\(hole.number)")
+                                Text("Hole #\(hole.number)")
                                     .font(.title2.bold())
                                     .foregroundColor(AppTheme.textPrimary)
                                 
@@ -42,28 +42,28 @@ struct HoleDetailSheet: View {
                         HStack(spacing: AppTheme.paddingLarge) {
                             InfoBadge(
                                 icon: "location",
-                                title: "Позиция",
-                                value: "X: \(String(format: "%.1f", hole.x))м\nY: \(String(format: "%.1f", hole.y))м"
+                                title: "Position",
+                                value: "X: \(String(format: "%.1f", hole.x))m\nY: \(String(format: "%.1f", hole.y))m"
                             )
                             
                             if let depth = hole.depth {
                                 InfoBadge(
                                     icon: "water.waves",
-                                    title: "Глубина",
-                                    value: "\(String(format: "%.1f", depth))м"
+                                    title: "Depth",
+                                    value: "\(String(format: "%.1f", depth))m"
                                 )
                             }
                             
                             InfoBadge(
                                 icon: "fish.fill",
-                                title: "Улов",
+                                title: "Catch",
                                 value: "\(hole.catches)"
                             )
                         }
                         
                         // Status selection
                         VStack(alignment: .leading, spacing: AppTheme.paddingSmall) {
-                            Text("Статус")
+                            Text("Status")
                                 .font(.headline)
                                 .foregroundColor(AppTheme.textPrimary)
                             
@@ -87,7 +87,7 @@ struct HoleDetailSheet: View {
                         HStack(spacing: AppTheme.paddingMedium) {
                             ActionButton(
                                 icon: "fish.fill",
-                                title: "Поймал!",
+                                title: "Caught!",
                                 color: AppTheme.holeCaught
                             ) {
                                 viewModel.addCatch(hole)
@@ -95,7 +95,7 @@ struct HoleDetailSheet: View {
                             
                             ActionButton(
                                 icon: "checkmark.circle",
-                                title: "Пробурена",
+                                title: "Drilled",
                                 color: AppTheme.holeDrilled
                             ) {
                                 viewModel.updateHoleStatus(hole, status: .drilled)
@@ -104,7 +104,7 @@ struct HoleDetailSheet: View {
                         
                         // Notes
                         VStack(alignment: .leading, spacing: AppTheme.paddingSmall) {
-                            Text("Заметки")
+                            Text("Notes")
                                 .font(.headline)
                                 .foregroundColor(AppTheme.textPrimary)
                             
@@ -127,7 +127,7 @@ struct HoleDetailSheet: View {
                         } label: {
                             HStack {
                                 Image(systemName: "trash")
-                                Text("Удалить лунку")
+                                Text("Delete Hole")
                             }
                             .font(.headline)
                             .foregroundColor(AppTheme.danger)
@@ -143,7 +143,7 @@ struct HoleDetailSheet: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button("Готово") {
+                    Button("Done") {
                         dismiss()
                     }
                     .foregroundColor(AppTheme.primary)

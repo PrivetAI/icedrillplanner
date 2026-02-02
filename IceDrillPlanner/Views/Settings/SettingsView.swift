@@ -8,75 +8,43 @@ struct SettingsView: View {
             AppTheme.background.ignoresSafeArea()
             
             List {
-                // Default settings
-                Section {
-                    HStack {
-                        Label("Расстояние по умолчанию", systemImage: "ruler")
-                            .foregroundColor(AppTheme.textPrimary)
-                        Spacer()
-                        Stepper(
-                            "\(Int(viewModel.settings.defaultSpacing)) м",
-                            value: $viewModel.settings.defaultSpacing,
-                            in: 2...20,
-                            step: 1
-                        )
-                        .labelsHidden()
-                    }
-                    
-                    HStack {
-                        Label("Лунок по умолчанию", systemImage: "number")
-                            .foregroundColor(AppTheme.textPrimary)
-                        Spacer()
-                        Stepper(
-                            "\(viewModel.settings.defaultHoleCount)",
-                            value: $viewModel.settings.defaultHoleCount,
-                            in: 5...50,
-                            step: 5
-                        )
-                        .labelsHidden()
-                    }
-                } header: {
-                    Text("Настройки по умолчанию")
-                }
-                .listRowBackground(AppTheme.cardBackground)
-                
                 // Display settings
                 Section {
                     Toggle(isOn: $viewModel.settings.showDistances) {
-                        Label("Показывать расстояния", systemImage: "arrow.left.and.right")
+                        Label("Show Distances", systemImage: "arrow.left.and.right")
                             .foregroundColor(AppTheme.textPrimary)
                     }
                     .tint(AppTheme.primary)
                     
                     Toggle(isOn: $viewModel.settings.showGrid) {
-                        Label("Показывать сетку", systemImage: "grid")
+                        Label("Show Grid", systemImage: "grid")
                             .foregroundColor(AppTheme.textPrimary)
                     }
                     .tint(AppTheme.primary)
                     
                     Toggle(isOn: $viewModel.settings.useMetricUnits) {
-                        Label("Метрическая система", systemImage: "ruler")
+                        Label("Metric Units", systemImage: "ruler")
                             .foregroundColor(AppTheme.textPrimary)
                     }
                     .tint(AppTheme.primary)
                 } header: {
-                    Text("Отображение")
+                    Text("Display")
                 }
                 .listRowBackground(AppTheme.cardBackground)
                 
                 // About
                 Section {
                     HStack {
-                        Label("Версия", systemImage: "info.circle")
+                        Label("Version", systemImage: "info.circle")
                             .foregroundColor(AppTheme.textPrimary)
                         Spacer()
                         Text("1.0.0")
                             .foregroundColor(AppTheme.textMuted)
                     }
                 } header: {
-                    Text("О приложении")
+                    Text("About")
                 } footer: {
-                    Text("Ice Drill Pattern Planner — профессиональный инструмент для планирования расстановки лунок на льду.")
+                    Text("Ice Drill Pattern Planner — professional tool for planning ice fishing hole layouts.")
                         .foregroundColor(AppTheme.textMuted)
                 }
                 .listRowBackground(AppTheme.cardBackground)
@@ -93,13 +61,13 @@ struct SettingsView: View {
                         }
                     }
                 } header: {
-                    Text("Легенда цветов")
+                    Text("Color Legend")
                 }
                 .listRowBackground(AppTheme.cardBackground)
             }
             .scrollContentBackground(.hidden)
         }
-        .navigationTitle("Настройки")
+        .navigationTitle("Settings")
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(AppTheme.background, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)

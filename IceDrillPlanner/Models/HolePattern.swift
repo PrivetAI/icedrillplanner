@@ -13,23 +13,23 @@ enum HolePattern: String, Codable, CaseIterable, Identifiable {
     
     var displayName: String {
         switch self {
-        case .grid: return "Сетка"
-        case .line: return "Линия"
-        case .zigzag: return "Зигзаг"
-        case .circle: return "Круг"
-        case .fan: return "Веер"
-        case .random: return "Случайный"
+        case .grid: return "Grid"
+        case .line: return "Line"
+        case .zigzag: return "Zigzag"
+        case .circle: return "Circle"
+        case .fan: return "Fan"
+        case .random: return "Random"
         }
     }
     
     var description: String {
         switch self {
-        case .grid: return "Равномерная сетка для максимального покрытия"
-        case .line: return "Одна линия вдоль глубины или берега"
-        case .zigzag: return "Зигзагообразное расположение"
-        case .circle: return "Лунки по кругу вокруг центра"
-        case .fan: return "Веером от берега вглубь"
-        case .random: return "Случайное расположение"
+        case .grid: return "Uniform grid for maximum coverage"
+        case .line: return "Single line along depth or shore"
+        case .zigzag: return "Zigzag arrangement"
+        case .circle: return "Holes in a circle around center"
+        case .fan: return "Fan pattern from shore outward"
+        case .random: return "Random placement"
         }
     }
     

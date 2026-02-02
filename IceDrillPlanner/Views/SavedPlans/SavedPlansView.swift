@@ -32,19 +32,19 @@ struct SavedPlansView: View {
                 }
             }
         }
-        .navigationTitle("Мои планы")
+        .navigationTitle("My Plans")
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(AppTheme.background, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
-        .alert("Удалить план?", isPresented: $showDeleteAlert) {
-            Button("Отмена", role: .cancel) {}
-            Button("Удалить", role: .destructive) {
+        .alert("Delete Plan?", isPresented: $showDeleteAlert) {
+            Button("Cancel", role: .cancel) {}
+            Button("Delete", role: .destructive) {
                 if let plan = planToDelete {
                     viewModel.deletePlan(plan)
                 }
             }
         } message: {
-            Text("Это действие нельзя отменить")
+            Text("This action cannot be undone")
         }
         .onAppear {
             viewModel.loadData()
@@ -62,11 +62,11 @@ struct EmptyPlansView: View {
                 .font(.system(size: 60))
                 .foregroundColor(AppTheme.textMuted)
             
-            Text("Нет сохранённых планов")
+            Text("No Saved Plans")
                 .font(.title3.bold())
                 .foregroundColor(AppTheme.textPrimary)
             
-            Text("Создайте первый план расстановки лунок")
+            Text("Create your first hole layout plan")
                 .font(.subheadline)
                 .foregroundColor(AppTheme.textSecondary)
                 .multilineTextAlignment(.center)
@@ -74,7 +74,7 @@ struct EmptyPlansView: View {
             Button(action: onCreateNew) {
                 HStack {
                     Image(systemName: "plus.circle.fill")
-                    Text("Создать план")
+                    Text("Create Plan")
                 }
                 .font(.headline)
                 .foregroundColor(.white)
@@ -121,10 +121,10 @@ struct PlanCard: View {
                 
                 // Stats
                 HStack(spacing: AppTheme.paddingLarge) {
-                    PlanStat(icon: "circle.dotted", value: "\(plan.totalHoles)", label: "лунок")
-                    PlanStat(icon: plan.pattern.icon, value: plan.pattern.displayName, label: "паттерн")
-                    PlanStat(icon: "ruler", value: "\(Int(plan.spacing))м", label: "шаг")
-                    PlanStat(icon: "fish.fill", value: "\(plan.totalCatches)", label: "улов")
+                    PlanStat(icon: "circle.dotted", value: "\(plan.totalHoles)", label: "holes")
+                    PlanStat(icon: plan.pattern.icon, value: plan.pattern.displayName, label: "pattern")
+                    PlanStat(icon: "ruler", value: "\(Int(plan.spacing))m", label: "step")
+                    PlanStat(icon: "fish.fill", value: "\(plan.totalCatches)", label: "catch")
                 }
                 
                 // Zone info
@@ -145,13 +145,13 @@ struct PlanCard: View {
             Button {
                 onTap()
             } label: {
-                Label("Открыть", systemImage: "folder")
+                Label("Open", systemImage: "folder")
             }
             
             Button(role: .destructive) {
                 onDelete()
             } label: {
-                Label("Удалить", systemImage: "trash")
+                Label("Delete", systemImage: "trash")
             }
         }
     }
