@@ -8,9 +8,6 @@ struct HoleMarkerView: View {
     
     var body: some View {
         GeometryReader { geo in
-            let x = CGFloat(hole.x * scale) + geo.size.width / 2 - CGFloat(hole.x * scale) + CGFloat(hole.x * scale)
-            let y = CGFloat(hole.y * scale) + geo.size.height / 2 - CGFloat(hole.y * scale) + CGFloat(hole.y * scale)
-            
             ZStack {
                 // Outer glow when selected or dragging
                 if isSelected || isDragging {

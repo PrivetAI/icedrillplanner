@@ -61,7 +61,7 @@ class StorageManager {
 }
 
 // MARK: - App Settings
-struct AppSettings: Codable {
+struct AppSettings: Codable, Equatable {
     var defaultSpacing: Double = 5.0
     var defaultHoleCount: Int = 15
     var showDistances: Bool = true
